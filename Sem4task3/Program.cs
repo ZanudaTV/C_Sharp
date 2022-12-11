@@ -3,7 +3,7 @@
 6, 1, 33 -> [6, 1, 33] */
 
 
-// int[] CreateArray(){
+int[] CreateArray(){
 Console.Write("Введите колличество элементов массива:\t");  // запутался в типах данных пытался
                     // все до вывода в коноль в метод но не выходило из за int[] не преобразовывается в int.
                     // в чем разница помню но решить не вышло.
@@ -19,7 +19,8 @@ for (int i = 0; i < array.Length; i++)
     
 }
 Console.WriteLine("[{0}]", string.Join(", ", array));
-//
-//}
-// int[] resalt = CreateArray();
-// Console.WriteLine($"Прилумайте массив {resalt}:\t");
+return array;
+}
+ int[] resalt = CreateArray();
+ Console.WriteLine("[{0}]", string.Join(", ", resalt));
+ Console.WriteLine($"Прилумайте массив {resalt}:\t");
