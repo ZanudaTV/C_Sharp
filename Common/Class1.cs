@@ -14,7 +14,7 @@ public static class Class1
 
         for (int i = 0; i < array.Length; i++)
         {
-            Console.Write($"\nВведите элемент массива под индексом {i}:\t");
+            Console.Write($"\n Введите элемент массива под индексом {i}:\t");
             array[i] = int.Parse(Console.ReadLine());
 
         }
