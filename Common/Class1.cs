@@ -2,7 +2,7 @@
 
 public static class Class1
 {
-   static int[] CreateArray()
+    public static int[] CreateArray()
     {
         Console.Write("Введите колличество элементов массива:\t");  // запутался в типах данных пытался
                                                                     // все до вывода в коноль в метод но не выходило из за int[] не преобразовывается в int.
@@ -20,5 +20,33 @@ public static class Class1
         }
         Console.WriteLine("[{0}]", string.Join(", ", array));
         return array;
+    }
+
+
+    public static int[,] CreateRandom2DArray(int countOfRows, int countOfColumns)
+    {
+        Random random = new Random();
+        int[,] array = new int[countOfRows, countOfColumns];
+
+        for (var i = 0; i < array.GetLength(0); i++)
+        {
+            for (var j = 0; j < array.GetLength(1); j++)
+            {
+                array[i, j] = random.Next(-10, 11);
+            }
+        }
+        return array;
+    }
+
+    public static void Print2DArray(double[,] array)
+    {
+        for (var i = 0; i < array.GetLength(0); i++)
+        {
+            for (var j = 0; j < array.GetLength(1); j++)
+            {
+                Console.Write($"{array[i, j]} ");
+            }
+            Console.WriteLine();
+        }
     }
 }
